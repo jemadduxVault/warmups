@@ -18,12 +18,16 @@ When the assignment is released, `git pull` to get the assignment.
 
 A solution will sometimes be released at 9:15. In order to be able to pull those changes from the master, you will need to either commit or stash your changes:
 
-`git commit -m "Complete assignment X"`
-`git pull`
+```sh
+git commit -m "Complete assignment X"
+git pull
+```
 
 or:
 
-`git stash save "Assignment X"`
-`git pull`
-`git stash pop`
+```sh
+git stash save "Assignment X"
+git pull
+git stash pop
+```
 
