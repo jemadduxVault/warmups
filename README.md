@@ -1,6 +1,6 @@
 # Warm-Up Exercises
 
-Individual exercises to start the day right.
+Individual exercises to start the day off right.
 
 We will release an exercise at 8:50 am daily. You have until 9:15 am to complete the assignment.
 
