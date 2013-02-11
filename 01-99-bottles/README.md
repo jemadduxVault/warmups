@@ -14,6 +14,18 @@ Write a program which prints out the lyrics to that beloved classic, that field-
 * Consider monkeypatching Fixnum so you could run `99.bottles_of_beer` or `12.bottles_of_beer` to run the song from an arbitrary starting point.
 * Make it a bit more flexible, so `99.bottles_of_beer` works, but so does `99.bottles_of("seltzer")`
 
+## To run the test
+
+```sh
+ruby 01-99-bottles/test.rb
+```
+
+Or, if you're already in that directory
+
+```sh
+ruby test.rb
+```
+
 ## Data
 
 Here's a sampling of the lyrics...
