@@ -1,6 +1,6 @@
 # Leap
 
-Write a program that will read in a year from the command line and report if it is a leap year. The tricky thing here is that a leap year occurs:
+Write a program that will take a year and report if it is a leap year. The tricky thing here is that a leap year occurs:
 
 ```plain
 on every year that is evenly divisible by 4
