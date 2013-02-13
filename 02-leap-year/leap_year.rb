@@ -21,16 +21,18 @@ class Year
 end
 
 class Fixnum
-  def leap_year?
-  	Year.new(self).leap?
+  def self.leap_year?
+  	year = self
+  	Year.new().leap?
   end
 end
 
 (1990..2105).each do |year|
-  #year.leap_year?
-  Year.new(year).leap?
+  year.leap_year?
+  #Year.new(year).leap?
 end
 
+#1996.leap_year?
 # Monkeypatch `Fixnum` to provide a `leap_year?` method:
 
 # ```ruby
