@@ -3,14 +3,20 @@ class Scrabble
 
 	end
 
-	def self.score(word="",twoxor3x_letter,which_letter,twoxor3x_word)
+	def self.score(word="",twoxor3x_letter="",which_letter=400,twoxor3x_word="")
 		word_array = word.split("")
 		score = 0
 		score = tally_score(word_array)
 	  if which_letter <= word_array.length
 	  	new_array = []
 	  	new_array.push(word_array[which_letter])
-	  	score += tally_score(new_array)
+	  	
+	  	plus_score = tally_score(new_array)
+	  	if twoxor3x_letter == ":triple"
+	  	  score += plus_score *2
+	  	else
+	  		score += plus_score
+	  	end
 	  end
 	  				
 		case twoxor3x_word
@@ -21,6 +27,7 @@ class Scrabble
 			else
 		end
 		puts "#{word}: #{score}"
+		return score
 	end
 
 	def self.tally_score(word_array)
@@ -53,7 +60,7 @@ end
 words = ["cabbage","jigglypuff","snake","komodo","dragon"]
 
 words.each do |word|
-  Scrabble.score(word,':double',4,':double')
+  Scrabble.score(word,':triple',4,':double')
 end
 
 
