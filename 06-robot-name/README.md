@@ -57,6 +57,21 @@ robot3.name
 robot3.instruction_count # => 5
 ```
 
+### Robot Time
+
+Number of instructions is important, but so is the total age of the robot.
+
+```ruby
+puts "Robot 3: "
+robot3 = Robot.new
+puts robot3.timers # => "21 seconds since last boot, 21 seconds since creation"
+puts robot3.name
+puts "Resetting to factory settings."
+robot3.reset
+puts robot3.timers # => "8 seconds since last boot, 29 seconds since creation"
+robot3.name
+```
+
 ## Source
 A debugging session with Paul Blackwell.
 
