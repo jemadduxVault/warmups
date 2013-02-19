@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 def all_caps(input)
   bob_array = input.split()
   bob_array.each do |letter|
@@ -52,3 +53,41 @@ end
 # * Several vowels are always replaced with numbers: a = 4, e = 3, i = 1, o = 0
 # * Words that start with a consonant start with lower case
 # * Consonants after the first letter alternate upper and lower case, except the alternation starts over with lowercase after a digit (ex: sCh00l)
+=======
+class Bob
+  def chat(input)
+    puts response_for(input)
+  end
+
+  def response_for(input)
+    if shouting?(input)
+      'Woah, chill out!'
+    elsif question?(input)
+      'Sure.'
+    elsif statement?(input)
+      'Whatever.'
+    else
+      'Fine, be that way.'
+    end
+  end
+
+  def statement?(input)
+    input.length > 0
+  end
+
+  def question?(input)
+    input.end_with?("?")
+  end
+
+  def shouting?(input)
+    !input.empty? && input == input.upcase
+  end
+end
+
+puts "Hey bro, wassup?"
+bob = Bob.new
+while true
+  input = gets.chomp.strip
+  bob.chat(input)
+end
+>>>>>>> 32d344fd0fe4273a266a7ff8a1df885d1c59ad36
