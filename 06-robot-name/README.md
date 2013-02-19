@@ -33,8 +33,8 @@ puts robot3.name
 puts robot3.name
 puts "Resetting to factory settings."
 robot3.reset
-robot3.name
-robot3.name
+puts robot3.name
+puts robot3.name
 ```
 
 then robot3 will have the same name twice, then we'll get the reset message, then it will get a new name, and print it twice.
@@ -52,9 +52,9 @@ puts robot3.name
 puts robot3.name
 puts "Resetting to factory settings."
 robot3.reset
-robot3.name
-robot3.name
-robot3.instruction_count # => 5
+puts robot3.name
+puts robot3.name
+puts robot3.instruction_count # => 5
 ```
 
 ### Robot Time
@@ -69,7 +69,7 @@ puts robot3.name
 puts "Resetting to factory settings."
 robot3.reset
 puts robot3.timers # => "8 seconds since last boot, 29 seconds since creation"
-robot3.name
+puts robot3.name
 ```
 
 ## Source
