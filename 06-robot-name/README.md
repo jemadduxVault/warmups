@@ -39,6 +39,24 @@ robot3.name
 
 then robot3 will have the same name twice, then we'll get the reset message, then it will get a new name, and print it twice.
 
+## Extensions
+
+### Counters
+
+It's important that we not overwork our robots. While resetting to factory defaults is great, the wear and tear on the robot mechanics doesn't go away. Have your robot track the total number of operations that have been performed on it.
+
+```ruby
+puts "Robot 3: "
+robot3 = Robot.new
+puts robot3.name
+puts robot3.name
+puts "Resetting to factory settings."
+robot3.reset
+robot3.name
+robot3.name
+robot3.instruction_count # => 5
+```
+
 ## Source
 A debugging session with Paul Blackwell.
 
