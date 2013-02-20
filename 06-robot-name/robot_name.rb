@@ -6,7 +6,12 @@ class Robot
   end
 
   def random_name
-    "RX#{rand(0..9)}#{rand(0..9)}#{rand(0..9)}"#random RX837
+    "#{random_letter}#{random_letter}#{rand(0..9)}#{rand(0..9)}#{rand(0..9)}"#random RX837
+  end
+
+  def random_letter
+    ("A".."Z").to_a[rand(0..24)]
+    #{}"#{%w(Q W E R T Y U I O P L K J H G F D S A Z X C V B N M)[rand(0..24)]}"
   end
 
   def reset
