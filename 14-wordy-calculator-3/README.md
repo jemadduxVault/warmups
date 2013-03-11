@@ -2,6 +2,10 @@
 
 Write a program that takes a word problem in the format:
 
+> What is 5 plus -13?
+
+> What is 7 minus 5?
+
 > What is 5 plus 13 plus 6?
 
 > What is 7 minus 5 minus 1?
