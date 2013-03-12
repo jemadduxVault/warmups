@@ -26,6 +26,10 @@ Some good test cases for this program are:
 * -1
 * 100
 
+## Extensions
+
+Shell out to Mac OS X's program to talk out loud.
+
 ## Source
 A variation on [JavaRanch CattleDrive, exercise 4a](http://www.javaranch.com/say.jsp)
 
