@@ -17,6 +17,15 @@ Say.new(-1).in_english
 
 The program must also report any values that are out of range.
 
+Some good test cases for this program are:
+
+* 0
+* 14
+* 50
+* 98
+* -1
+* 100
+
 ## Source
 A variation on [JavaRanch CattleDrive, exercise 4a](http://www.javaranch.com/say.jsp)
 
