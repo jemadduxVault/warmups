@@ -7,11 +7,7 @@ class Say
 
   def in_english
     guard_range
-    if value < 20
-      say_small_number
-    else
-      say_big_number
-    end
+    say_small_number || say_big_number
   end
 
   private
