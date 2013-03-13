@@ -1,20 +1,18 @@
 class Chunks
   def initialize(num)
-    @num = num.to_s
+    @num = num.to_s.rjust(12, "0")
   end
 
   def split
     if @num.to_i > 999_999_999_999 || @num.to_i < 0
       puts "Wrong"
     else
-      length = @num.length
-      @num = @num.rjust(12, "0")
       chunks = []
       chunks[0] = @num[0..2].to_i
       chunks[1] = @num[3..5].to_i
       chunks[2] = @num[6..8].to_i
       chunks[3] = @num[9..11].to_i
-      puts chunks.to_s + " ---- " + @num
+      puts chunks.to_s
     end
   end
 end
