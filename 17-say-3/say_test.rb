@@ -7,7 +7,11 @@ class SayTest < MiniTest::Unit::TestCase
     assert_equal '0', Say.new(0).in_english
   end
 
+<<<<<<< HEAD
   def test_10
+=======
+  def test_100
+>>>>>>> 2235c334c938f047322006a0c956680cc4571ce8
     assert_equal '100', Say.new(100).in_english
   end
 
@@ -23,8 +27,13 @@ class SayTest < MiniTest::Unit::TestCase
     assert_equal '1 million', Say.new(10**6).in_english
   end
 
+<<<<<<< HEAD
   def test_1_million_and_some_crumbs
     assert_equal '1 million 2', Say.new(1000002).in_english
+=======
+  def test_2_million_and_some_crumbs
+    assert_equal '2 million 2', Say.new(2000002).in_english
+>>>>>>> 2235c334c938f047322006a0c956680cc4571ce8
   end
 
   def test_1_million_2_thousand_345
