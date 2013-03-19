@@ -10,6 +10,7 @@ Shortest intro to biochemistry EVAR:
 * nucleotides are to DNA and RNA as
 * amino acids are to proteins as
 * sugar is to starch as
+* oh crap lipids
 
 I'm not going to talk about lipids because they're crazy complex.
 
@@ -32,8 +33,18 @@ dna.count('G')
 dna.count('C')
 # => 4
 
+dna.count('U') # Uracil is a nucleotide that is used in RNA
+# => 0
+
 dna.nucleotide_counts
 # => {'A' => 6, 'T' => 6, 'G' => 5, 'C' => 4}
+```
+
+The code should raise an argument error if you try to count something that isn't a nucleotide.
+
+```ruby
+dna.count('S')
+# dna.rb:23:in 'count': That's not a nucleotide, silly! (ArgumentError)
 ```
 
 ## Sample Dataset
