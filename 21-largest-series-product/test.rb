@@ -8,14 +8,14 @@ class SeriesTest < MiniTest::Unit::TestCase
   end
 
   def test_slices_of_2
-    skip
+    
     series = Series.new("01234")
     expected = [[0, 1], [1, 2], [2, 3], [3, 4]]
     assert_equal expected, series.slices(2)
   end
 
   def test_slices_of_3
-    skip
+    
     series = Series.new("01234")
     expected = [[0, 1, 2], [1, 2, 3], [2, 3, 4]]
     assert_equal expected, series.slices(3)
