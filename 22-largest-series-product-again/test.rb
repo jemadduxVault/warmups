@@ -29,7 +29,11 @@ class SeriesTest < MiniTest::Unit::TestCase
   end
 
   def test_other_slices_of_2
+<<<<<<< HEAD
   
+=======
+    skip
+>>>>>>> dcb7aec1a6c3148848b616dd33371070abb3ee84
     series = Series.new("98273463")
     expected = [[9, 8], [8, 2], [2, 7], [7, 3], [3, 4], [4, 6], [6, 3]]
     assert_equal expected, series.slices(2)
