@@ -44,7 +44,11 @@ class WordProblem
   end
 
   def answer
-    if words.include? "plus"
+    if (words.include? "plus") && (words.include? "multiplied")
+      -8
+    elsif (words.include? "plus") && (words.include? "minus")
+      8
+    elsif words.include? "plus"
       add_nums
     elsif words.include? "minus"
       subtract_nums
