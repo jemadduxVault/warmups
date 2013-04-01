@@ -19,9 +19,9 @@ class School
 
   def sort
     new_db = {}
-    (0..12).each do |x|
-      if school[x] != nil
-        new_db[x] = school[x].reverse
+    (0..12).each do |grade|
+      if school[grade] != nil
+        new_db[grade] = school[grade].reverse
       end
     end
     new_db
