@@ -16,6 +16,6 @@ class School
 
   def sort
     sorted = db.sort_by {|grade, students| students.sort!; grade}
-    Hash[sorted]
+    Hash.new(sorted)
   end
 end
