@@ -1,5 +1,6 @@
 require 'minitest/autorun'
 require 'minitest/spec'
+require 'minitest/pride'
 require './bob'
 
 describe 'Bob' do
