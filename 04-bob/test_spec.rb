@@ -30,6 +30,8 @@ describe 'Bob' do
     end
   end
 
+  # Testing tip: The methods below seem to only be used privately,
+  # may want to remove them if the implementation is likely to change.
   describe 'question?' do
     it 'should check to see if the input ends with a "?".' do
       @bob1.question?('Hello?').must_equal true
