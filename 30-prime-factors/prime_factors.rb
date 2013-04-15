@@ -1,15 +1,13 @@
 class PrimeFactors
 
-  def self.for(input)
+  def self.for(number)
     primes = []
 
     # primes.reject {|p| p.even?}
 
-    if input == 1 
-      primes = []
-    elsif input == 2 || input == 3
-      primes << input
-    end
+    
+    primes = [] if number == 1 
+    primes = [number] if number == 2 || number == 3
     primes
   end
 
