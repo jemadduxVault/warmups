@@ -5,12 +5,12 @@ require_relative './anagram'
 class AnagramTest < MiniTest::Unit::TestCase
 
   def test_no_matches
-    skip
     detector = Anagram.new('diaper')
     assert_equal [], detector.match(%w(hello world zombie pants))
   end
 
   def test_detect_simple_anagram
+    skip
     detector = Anagram.new('ba')
     anagrams = detector.match(['ab', 'abc', 'bac'])
     assert_equal ['ab'], anagrams
