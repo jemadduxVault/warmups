@@ -6,7 +6,7 @@ class AnagramTest < MiniTest::Unit::TestCase
 
   def test_no_matches
     detector = Anagram.new('diaper')
-    assert_equal [], detector.match(%w(hello world zombie pants))
+    assert_equal [], detector.match(%w(hello world zombies pants))
   end
 
   def test_detect_simple_anagram
