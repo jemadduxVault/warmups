@@ -5,14 +5,13 @@ class Anagram
     @anagram = anagram
   end
 
-  def match(sentence)
+  def match(words)
     answer = []
-    sentence.each do |word|
+    words.each do |word|
       if word.split("").sort == anagram.split("").sort
         answer << word
       end
     end
     answer
   end
-
 end
