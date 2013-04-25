@@ -74,6 +74,4 @@ class TriangeTest < MiniTest::Unit::TestCase
   end
 end
 
-class TriangleError < Exception
-
-end
+class TriangleError < Exception; end

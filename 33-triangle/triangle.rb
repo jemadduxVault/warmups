@@ -7,13 +7,9 @@ class Triangle
 
   def kind
     raise TriangleError if (x <= 0) || (y <= 0) || (z <= 0) || not_triangle?
-    if (x == y) && (y == z)
-      :equilateral
-    elsif (x != y) && (y != z) && (z != x)
-      :scalene
-    else
-      :isosceles
-    end
+    return :equilateral if (x == y) && (y == z)
+    return :scalene if (x != y) && (y != z) && (z != x)
+    :isosceles
   end
 
   def not_triangle?
