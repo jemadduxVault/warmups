@@ -18,7 +18,7 @@ class Phone
   end
 
   def area_code
-    number[0..2]
+    number[0,3]
   end
 
   def check_for_errors(input)
@@ -28,6 +28,7 @@ class Phone
   end
 
   def to_s
-    "(#{number[0..2]}) #{number[3..5]}-#{number[6..-1]}"
+    x ||= number
+    "(#{x[0..2]}) #{x[3..5]}-#{x[6..-1]}"
   end
 end
