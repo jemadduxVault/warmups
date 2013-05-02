@@ -42,11 +42,12 @@
 
 
 
+# try: `diff -u example.rb solutions/extension1.rb`
 class Beer
-  def self.song
+  def self.song(initial_bottles=99)
     # 99.downto(2) #=> [99, 98, 97, ... , 3, 2]
     # We only go downto 2 because the last line is special
-    99.downto(2) do |i|
+    initial_bottles.downto(2) do |i|
       puts verse(i)
       puts "" # extra newline
     end
@@ -73,5 +74,15 @@ Go to the store and buy some more, 99 bottles of beer on the wall.
   def self.pluralize(num_bottles)
     return "bottles" if num_bottles != 1
     return "bottle"
+  end
+end
+
+# Reopen the Fixnum class to add an instance method. This is a terrible
+# practice but it's very useful to know that it's possible. This is
+# called Monkey Patching. In Ruby 2.x there will be a much safer way
+# of doing this called Refinements but this is still being worked on.
+class Fixnum
+  def bottles_of_beer
+    Beer.song(self)
   end
 end
