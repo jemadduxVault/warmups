@@ -7,7 +7,7 @@ class Grains
   def total
     sum = 0
     (1..64).each do |x|
-      sum += 2**(x-1)
+      sum += square(x)
     end
     sum
   end

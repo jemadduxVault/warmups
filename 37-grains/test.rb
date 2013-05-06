@@ -33,6 +33,6 @@ class GrainsTest < MiniTest::Unit::TestCase
   end
 
   def test_total_grains
-    assert_equal 18446744073709551615, Grains.new.total
+    assert_equal 18_446_744_073_709_551_615, Grains.new.total
   end
 end
