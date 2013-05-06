@@ -8,9 +8,26 @@ class BeerTest < MiniTest::Unit::TestCase
     end
     assert_equal expected.chomp.strip, out.chomp.strip
   end
+
+  def test_extension_1_fixnum_bottles_of_beer
+    skip
+    out, err = capture_io do
+      99.bottles_of_beer
+    end
+    assert_equal expected.chomp.strip, out.chomp.strip
+  end
+
+  def test_extension_2_fixnum_bottles_of_generic
+    skip
+    out, err = capture_io do
+      99.bottles_of("seltzer")
+    end
+    assert_equal expected.chomp.strip.gsub("beer", "seltzer"), out.chomp.strip
+  end
 end
 
 def expected
+  # This is called a Heredoc. It is a multi-line String.
   <<-SONG
 99 bottles of beer on the wall, 99 bottles of beer.
 Take one down and pass it around, 98 bottles of beer on the wall.
