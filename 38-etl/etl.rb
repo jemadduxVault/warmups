@@ -1,13 +1,9 @@
 class ETL
   def self.transform(input)
-    word = {}
-    input.each do |key,value|
-      value.each do |val|
-        word[val.downcase] = key
-      end
+    output = {}
+    input.each do |key, values|
+      values.each { |value| output[value.downcase] = key }
     end
-    word
+    output
   end
-
-
 end
