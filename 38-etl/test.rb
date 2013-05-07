@@ -7,20 +7,16 @@ class TransformTest < MiniTest::Unit::TestCase
   def test_transform_one_value
     old = { 'hello' => ['WORLD'] }
     expected = { 'world' => 'hello' }
-
     assert_equal expected, ETL.transform(old)
   end
 
   def test_transform_more_values
-    skip
     old = { 'hello' => ['WORLD', 'GSCHOOLERS'] }
     expected = { 'world' => 'hello', 'gschoolers' => 'hello' }
-
     assert_equal expected, ETL.transform(old)
   end
 
   def test_more_keys
-    skip
     old = { 'a' => ['APPLE', 'ARTICHOKE'], 'b' => ['BOAT', 'BALLERINA'] }
     expected = {
       'apple' => 'a',
@@ -28,12 +24,10 @@ class TransformTest < MiniTest::Unit::TestCase
       'boat' => 'b',
       'ballerina' => 'b'
     }
-
     assert_equal expected, ETL.transform(old)
   end
 
   def test_full_dataset
-    skip
     old = {
       1 => %W(A E I O U L N R S T),
       2 => %W(D G),
