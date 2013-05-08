@@ -1,27 +1,19 @@
 class Squares
-  attr_accessor :number
+  attr_reader :number
 
   def initialize(number)
     @number = number
   end
 
   def square_of_sums
-    sum = 0
-    (1..number).each do |x|
-      sum += x
-    end
-    sum**2
+    (1..number).inject(:+)**2
   end
 
   def sum_of_squares
-    sum = 0
-    (1..number).each do |x|
-      sum += x**2
-    end
-    sum
+    (1..number).collect{|x| x**2 }.inject(:+)
   end
 
   def difference
-    square_of_sums - sum_of_squares
+    (square_of_sums - sum_of_squares).abs
   end
 end
