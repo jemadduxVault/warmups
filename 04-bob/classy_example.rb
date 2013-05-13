@@ -28,9 +28,12 @@ class Bob
   end
 end
 
-puts "Hey bro, wassup?"
-bob = Bob.new
-while true
-  input = gets.chomp.strip
-  bob.chat(input)
+if ENV["RUBY_ENV"] == "test"
+else
+  puts "Hey bro, wassup?"
+  bob = Bob.new
+  while true
+    input = gets.chomp.strip
+    bob.chat(input)
+  end
 end
