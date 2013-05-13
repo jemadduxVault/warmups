@@ -1,52 +1,54 @@
 class Palindromes
   attr_reader :max, :min
 
-  def initialize(max, min = 0)
-    @max = max[:max_factor]
-    @min = min
+  def initialize(input)
+    @max = input[:max_factor]
+    if input[:min_factor]
+      @min = input[:min_factor]
+    else
+      @min = 0
+    end
   end
 
   def generate
   end
 
   def largest
-    LargePalin.new(max, min)
+    Palin.new(max, min, "largest")
   end
 
   def smallest
-    SmallPalin.new(max, min)
+    Palin.new(max, min, "smallest")
   end
 end
 
-class SmallPalin
-  attr_reader :max, :min
+class Palin
+  attr_reader :max, :min, :size
 
-  def initialize(max, min = 0)
-    @max, @min = max, min
+  def initialize(max, min, size)
+    @max, @min, @size = max, min, size
   end
 
   def value
-    121
+    palindromes = []
+    (min..max).each do |x|
+      (min..max).each do |y|
+        palindromes << x*y if (x*y).to_s == (x*y).to_s.reverse
+      end
+    end
+    return palindromes.max if size == "largest"
+    return palindromes.min if size == "smallest"
   end
 
   def factors
-    [[11, 11]]
+    factors = {}
+    (min..max).each do |x|
+      (min..max).each do |y|
+        factors[x*y] = [x,y] if ((x*y).to_s == (x*y).to_s.reverse)
+      end
+    end
+    return [factors.max[1].reverse] if size == "largest"
+    return [factors.min[1].reverse] if size == "smallest"
   end
 end
 
-class LargePalin
-  attr_reader :max, :min
-
-  def initialize(max, min = 0)
-    @max, @min = max, min
-  end
-
-  def value
-    return 9 if max == 9
-    return 9009 if max == 99
-  end
-
-  def factors
-    [[91, 99]]
-  end
-end
