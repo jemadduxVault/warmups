@@ -1,39 +1,83 @@
-class BeerSong
-  def intitialize
-	
+# class BeerSong
+#   def intitialize
+
+#   end
+
+#   def song(input=99,drink="beer")
+
+# 		end
+#   end
+# end
+
+# beer = BeerSong.new
+# beer.song()
+
+
+# beer_number = 99
+
+# beer_number.times do |x|
+#   puts "#{beer_number-x} bottles of beer on the wall, #{beer_number-x} bottles of beer."
+#   puts "Take one down and pass it around, #{beer_number-x-1} bottles of beer on the wall."
+#   puts ""
+# end
+
+class Wall
+  attr_accessor :beverage_number, :beverage_name
+
+  def initialize(beverage_number, beverage_name)
+    @beverage_number = beverage_number
+    @beverage_name = beverage_name
   end
 
-  def song(input=99,drink="beer")
-    beer_number = input
+  def beverage
+    @beverage ||= Beer.new(beverage_name)
+  end
 
-		beer_number.times do |x|
-		  puts "#{beer_number-x} bottles of #{drink} on the wall, #{beer_number-x} bottles of #{drink}."
-		  puts "Take one down and pass it around, #{beer_number-x-1} bottles of #{drink} on the wall."
-		  puts ""
-		end
+  def to_s
+    verse = ""
+    beverage_number.times do |x|
+      verse += "#{beverage_number-x} bottles of #{beverage.name} on the wall, #{beverage_number-x} bottles of #{beverage.name}. \n Take one down and pass it around, #{beverage_number-x-1} bottles of #{beverage.name} on the wall. \n \n"
+    end
+    verse
   end
 end
 
-beer = BeerSong.new
-beer.song()
+class Bottle
+end
+
+class Beverage < Bottle
+end
+
+class Beer < Beverage
+  attr_accessor :name
+
+  def initialize(name)
+    @name = name
+  end
+
+  # def name
+  #   "Malt Liquor"
+  # end
+end
+
+class WallPrinter
+  def self.go
+    wall = Wall.new(99, "Ole Fortan")
+    puts wall.to_s
+    wall = Wall.new(9, "Stupid Water")
+    puts wall.to_s
+    wall = Wall.new(100_000_000_000_000, "Dry Dock Apricot")
+    puts wall.to_s
+  end
+end
+
+WallPrinter.go
 
 
 
 
-# Your file should be called `beer.rb`
-# * The program should be called with `Beer.song`
-# * The program should output to STDOUT using `puts`
-# * Each verse should be separated by a single blank line.
 
-# ## Extensions
 
-# * Consider monkeypatching Fixnum so you could run `99.bottles_of_beer` or `12.bottles_of_beer` to run the song from an arbitrary starting point.
-# * Make it a bit more flexible, so `99.bottles_of_beer` works, but so does `99.bottles_of("seltzer")`
 
-# ## Data
 
-# Here's a sampling of the lyrics...
 
-# ```
-# 99 bottles of beer on the wall, 99 bottles of beer.
-# Take one down and pass it around, 98 bottles of beer on the wall.
