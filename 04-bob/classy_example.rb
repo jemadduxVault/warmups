@@ -84,6 +84,7 @@ class Bob
   end
 end
 
+<<<<<<< HEAD:04-bob/bob.rb
 puts "Hey bro, wassup?"
 bob = Bob.new
 while true
@@ -91,3 +92,14 @@ while true
   bob.chat(input)
 end
 >>>>>>> 32d344fd0fe4273a266a7ff8a1df885d1c59ad36
+=======
+if ENV["RUBY_ENV"] == "test"
+else
+  puts "Hey bro, wassup?"
+  bob = Bob.new
+  while true
+    input = gets.chomp.strip
+    bob.chat(input)
+  end
+end
+>>>>>>> 7b1a477b73097ebf9b95bce021b78fbdaf5daf35:04-bob/classy_example.rb
