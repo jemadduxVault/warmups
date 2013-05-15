@@ -14,7 +14,7 @@ class Prime
   end
 
   def self.add_next_prime(current_prime)
-    ((current_prime+1)..100_000_000_000_000).each do |x|
+    ((current_prime+1)..100_000_000).each do |x|
       return @primes << x if prime?(x)
     end
   end
@@ -25,5 +25,6 @@ class Prime
       return false if num % y == 0
     end
     true
+    # Prime.prime?(num)
   end
 end
