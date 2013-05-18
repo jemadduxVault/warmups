@@ -32,3 +32,19 @@ Update the `~/.bash_profile` to include NPM binary files on the PATH:
 ```
 export PATH=/usr/local/share/npm/bin:$PATH
 ```
+
+## Execution
+
+### Ruby
+
+```bash
+$ cd WARMUP
+$ ruby test.rb
+```
+
+### JavaScript
+
+```bash
+$ cd WARMUP
+$ jasmine-node test.spec.js
+```
