@@ -4,9 +4,9 @@ class Raindrops
 
   def convert(number)
     word = ""
-    word += "Pling" if number % 3 == 0
-    word += "Plang" if number % 5 == 0
-    word += "Plong" if number % 7 == 0
+    {3 => "Pling", 5 => "Plang", 7 => "Plong"}.each do |key, value|
+      word += value if number % key == 0
+    end
     return word if word != ""
     number.to_s
   end
