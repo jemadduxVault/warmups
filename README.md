@@ -1,11 +1,5 @@
 # Warm-Up Exercises
 
-Individual exercises to start the day off right.
-
-We will release an exercise at 8:50 am daily. You have until 9:15 am to complete the assignment.
-
-There will be 10 minutes at the end to wrap up. The format for this will vary.
-
 ## Setup
 
 Clone this repository.
@@ -14,20 +8,43 @@ Clone this repository.
 git clone git@github.com:JumpstartLab/warmup-exercises.git
 ```
 
-When the assignment is released, `git pull` to get the assignment.
+### Ruby
 
-A solution will sometimes be released at 9:15. In order to be able to pull those changes from the master, you will need to either commit or stash your changes:
+* Install [RVM](https://rvm.io/)
+* Install [Ruby 2.0.0](http://www.ruby-lang.org/en/)
 
-```sh
-git commit -m "Complete assignment X"
-git pull
+```bash
+$ \curl -L https://get.rvm.io | bash -s stable --rails --autolibs=enabled
 ```
 
-or:
+### JavaScript
 
-```sh
-git stash save "Assignment X"
-git pull
-git stash pop
+* Install [Node.js](http://nodejs.org/)
+* Install [jasmine-node](https://github.com/mhevery/jasmine-node)
+
+```bash
+$ brew install node
+$ node install jasmine-node -g
 ```
 
+Update the `~/.bash_profile` to include NPM binary files on the PATH:
+
+```
+export PATH=/usr/local/share/npm/bin:$PATH
+```
+
+## Execution
+
+### Ruby
+
+```bash
+$ cd WARMUP
+$ ruby test.rb
+```
+
+### JavaScript
+
+```bash
+$ cd WARMUP
+$ jasmine-node test.spec.js
+```
