@@ -3,10 +3,10 @@ class Raindrops
   end
 
   def convert(number)
-    word = ""
-    primes.each do |key, value|
-      word += value if number % key == 0
+    word = primes.collect do |key, value|
+      value if number % key == 0
     end
+    word = word.join("")
     return word if word != ""
     number.to_s
   end
