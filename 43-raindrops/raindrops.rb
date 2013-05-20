@@ -1,15 +1,13 @@
 class Raindrops
   def initialize
-
   end
 
-  def convert(input)
+  def convert(number)
     word = ""
-    word += "Pling" if input % 3 == 0
-    word += "Plang" if input % 5 == 0
-    word += "Plong" if input % 7 == 0
+    word += "Pling" if number % 3 == 0
+    word += "Plang" if number % 5 == 0
+    word += "Plong" if number % 7 == 0
     return word if word != ""
-    input.to_s
+    number.to_s
   end
-
 end
