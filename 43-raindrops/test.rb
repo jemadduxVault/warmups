@@ -29,7 +29,7 @@ class RaindropsTest < MiniTest::Unit::TestCase
   end
 
   def test_6
-    assert_equal "Pling", drops.convert(9)
+    assert_equal "Pling", drops.convert(6)
   end
 
   def test_9
