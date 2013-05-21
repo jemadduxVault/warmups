@@ -19,7 +19,7 @@ class Luhn
   def addends
     numbers = []
     number.to_s.reverse.split("").map(&:to_i).each_with_index do |n, i|
-      value = i.even? n * 2 : n
+      value = i.even? ? n : n * 2
       value -= 9 if value > 9
       numbers << value
     end
