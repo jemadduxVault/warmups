@@ -17,7 +17,7 @@ git clone git@github.com:JumpstartLab/warmup-exercises.git
 $ \curl -L https://get.rvm.io | bash -s stable --rails --autolibs=enabled
 ```
 
-### JavaScript
+### JavaScript & CoffeeScript
 
 * Install [Node.js](http://nodejs.org/)
 * Install [jasmine-node](https://github.com/mhevery/jasmine-node)
@@ -47,4 +47,11 @@ $ ruby test.rb
 ```bash
 $ cd WARMUP
 $ jasmine-node test.spec.js
+```
+
+### CoffeeScript
+
+```bash
+$ cd WARMUP
+$ jasmine-node --coffeee test.spec.coffee
 ```
