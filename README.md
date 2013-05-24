@@ -51,7 +51,10 @@ $ jasmine-node test.spec.js
 
 ### CoffeeScript
 
+Jasmine-Node favors JavaScript files over CoffeeScript (even with the differing
+file endings) so the test file named is named differently.
+
 ```bash
 $ cd WARMUP
-$ jasmine-node --coffeee test.spec.coffee
+$ jasmine-node --coffeee coffee.spec.coffee
 ```
