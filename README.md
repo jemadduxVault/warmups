@@ -24,7 +24,7 @@ $ \curl -L https://get.rvm.io | bash -s stable --rails --autolibs=enabled
 
 ```bash
 $ brew install node
-$ node install jasmine-node -g
+$ npm install jasmine-node -g
 ```
 
 Update the `~/.bash_profile` to include NPM binary files on the PATH:
@@ -56,5 +56,5 @@ file endings) so the test file named is named differently.
 
 ```bash
 $ cd WARMUP
-$ jasmine-node --coffeee coffee.spec.coffee
+$ jasmine-node --coffee coffee.spec.coffee
 ```
