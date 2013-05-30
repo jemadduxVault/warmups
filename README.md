@@ -17,14 +17,14 @@ git clone git@github.com:JumpstartLab/warmup-exercises.git
 $ \curl -L https://get.rvm.io | bash -s stable --rails --autolibs=enabled
 ```
 
-### JavaScript
+### JavaScript & CoffeeScript
 
 * Install [Node.js](http://nodejs.org/)
 * Install [jasmine-node](https://github.com/mhevery/jasmine-node)
 
 ```bash
 $ brew install node
-$ node install jasmine-node -g
+$ npm install jasmine-node -g
 ```
 
 Update the `~/.bash_profile` to include NPM binary files on the PATH:
@@ -47,4 +47,14 @@ $ ruby test.rb
 ```bash
 $ cd WARMUP
 $ jasmine-node test.spec.js
+```
+
+### CoffeeScript
+
+Jasmine-Node favors JavaScript files over CoffeeScript (even with the differing
+file endings) so the test file named is named differently.
+
+```bash
+$ cd WARMUP
+$ jasmine-node --coffee coffee.spec.coffee
 ```
