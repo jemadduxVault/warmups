@@ -17,6 +17,7 @@ class TestPrimes < MiniTest::Unit::TestCase
   end
 
   def test_big_prime
+
     assert_equal 104743, Prime.nth(10001)
   end
 
