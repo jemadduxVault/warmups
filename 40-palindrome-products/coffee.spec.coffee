@@ -1,4 +1,4 @@
-Palindrome = require('./palindrome').Palindrome
+Palindromes = require('./palindrome').Palindromes
 
 describe "Palindrome", ->
 
