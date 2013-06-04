@@ -33,24 +33,24 @@ class Robot
   end
 
   def turn_right
-    # directions = [:north, :east, :south, :west]
-    # directions.each_with_index do |direction, index|
-    #   if orientation == direction
-    #     orientation = directions[index]
-    #     return orientation
-    #   end
-    # end
-    return @orientation = :east if @orientation == :north
-    return @orientation = :south if @orientation == :east
-    return @orientation = :west if @orientation == :south
-    return @orientation = :north if @orientation == :west
+    turn(:right)
+  end
+
+  def turn(way)
+    which_way = 1 if way == :right
+    which_way = -1 if way == :left
+    directions = [:north, :east, :south, :west, :north]
+    directions.each_with_index do |direction, index|
+      if @orientation == direction
+        @orientation = directions[index + which_way]
+        return @orientation
+      end
+    end
   end
 
   def turn_left
     return @orientation = :west if @orientation == :north
-    return @orientation = :north if @orientation == :east
-    return @orientation = :east if @orientation == :south
-    return @orientation = :south if @orientation == :west
+    turn(:left)
   end
 
 end
