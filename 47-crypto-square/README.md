@@ -31,7 +31,7 @@ esaoh ghnss eoau
 Write a program that, given an English text, outputs the encoded version of
 that text.
 
-The size of the square should be decided by the length of the message.
+The size of the square (number of columns) should be decided by the length of the message.
 
 If the message is a length that creates a perfect square (e.g. 4, 9, 16, 25,
 36, etc), use that number of columns.
