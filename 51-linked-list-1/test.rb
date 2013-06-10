@@ -13,14 +13,12 @@ class LinkedListTest < MiniTest::Unit::TestCase
   end
 
   def test_head_datum
-    skip
     assert_equal 1, @head.datum
   end
 
   def test_add_next
     skip
     @head.next = Element.new(2)
-
     refute_nil @head.next
     assert_equal Element, @head.next.class
     assert_equal 2, @head.next.datum
