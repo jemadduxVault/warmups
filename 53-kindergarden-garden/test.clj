@@ -23,3 +23,9 @@
 (assert (= [:violets  :clover   :violets  :grass]    (:joseph  full-garden)))
 (assert (= [:grass    :clover   :clover   :grass]    (:kincaid full-garden)))
 (assert (= [:grass    :violets  :clover   :violets]  (:larry   full-garden)))
+
+(def surprise-garden (garden "VCRRGVRG\nRVGCCGCV" ["Samantha" "Patricia" "Xander" "Roger"]))
+(assert (= [:violets  :clover   :radishes :violets] (:patricia surprise-garden)))
+(assert (= [:radishes :radishes :grass    :clover]  (:roger    surprise-garden)))
+(assert (= [:grass    :violets  :clover   :grass]   (:samantha surprise-garden)))
+(assert (= [:radishes :grass    :clover   :violets] (:xander   surprise-garden)))
