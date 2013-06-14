@@ -33,6 +33,14 @@ Update the `~/.bash_profile` to include NPM binary files on the PATH:
 export PATH=/usr/local/share/npm/bin:$PATH
 ```
 
+### Clojure
+
+* Install [Clojure](http://clojure.org)
+
+```
+brew install clojure
+```
+
 ## Execution
 
 ### Ruby
@@ -57,4 +65,11 @@ file endings) so the test file named is named differently.
 ```bash
 $ cd WARMUP
 $ jasmine-node --coffee coffee.spec.coffee
+```
+
+### Clojure
+
+```bash
+$ cd WARMUP
+$ clj test.clj
 ```
