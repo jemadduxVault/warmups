@@ -15,3 +15,10 @@ class Words
     answer
   end
 end
+
+
+# Are you familiar with the `/\W/` regex shorthand character class? Try initializing your hash with a reasonable default value, like `0`.
+#              kytrinyx
+
+#If I use /\W/ it breaks because it gets rid of the empty spaces and won't split
+#if I put a 0 in the hash it returns too many things in the hash
