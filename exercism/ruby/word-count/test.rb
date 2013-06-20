@@ -39,5 +39,6 @@ class WordsTest < MiniTest::Unit::TestCase
     counts = {"go" => 3}
     assert_equal counts, words.count
   end
+
 end
 
