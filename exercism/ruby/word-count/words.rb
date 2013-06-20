@@ -6,9 +6,8 @@ class Words
   end
 
   def count
-    answer = {}
+    answer = Hash.new(0)
     sentence.each do |word|
-      answer[word] = 0 unless answer[word]
       answer[word] += 1
     end
     answer
