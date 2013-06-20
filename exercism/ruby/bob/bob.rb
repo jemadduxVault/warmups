@@ -4,7 +4,7 @@ class Bob
   end
 
   def hey(input)
-    return "Sure." if input[-1] == "?"
+    return "Sure." if input.end_with?("?")
     return "Fine, be that way." if input == ""
     return "Woah, chill out!" if input.upcase == input
     "Whatever."

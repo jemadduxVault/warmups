@@ -1,4 +1,4 @@
-require('./anagram');
+// require('./anagram');
 
 describe('Anagram', function() {
 
@@ -6,6 +6,7 @@ describe('Anagram', function() {
     var detector = new Anagram("diaper");
     var matches = detector.match([ "hello", "world", "zombies", "pants"]);
     expect(matches).toEqual([]);
+    fail
   });
 
   it("detects simple anagram",function() {

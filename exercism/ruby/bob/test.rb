@@ -46,6 +46,7 @@ class BobTest < MiniTest::Unit::TestCase
   end
 
   def test_lots_of_133t_words1
+    skip
     assert_equal "bai", bob.l33t_sP34k("bye")
     assert_equal "carp", bob.l33t_sP34k("crap")
     assert_equal "ceak", bob.l33t_sP34k("cake")
