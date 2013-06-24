@@ -6,11 +6,7 @@ class Anagram
   end
 
   def match(possible_matches)
-    answer = Array.new
-    possible_matches.each do |possible_match|
-      answer << possible_match if word_matches?(possible_match)
-    end
-    answer
+    possible_matches.select {|possible_match| word_matches?(possible_match)}
   end
 
   def word_matches?(possible_match)
