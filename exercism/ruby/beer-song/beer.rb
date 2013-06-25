@@ -13,10 +13,10 @@ class Beer
   def sing(x, y=0)
     answer = []
     (y..x).each do |num|
-      answer << verse(num)
       answer << "\n"
+      answer << verse(num)
     end
-    answer = answer.reverse[1..-1] + ["\n"]
+    answer = answer.reverse
     answer.join("")
   end
 
