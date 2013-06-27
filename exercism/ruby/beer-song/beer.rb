@@ -1,40 +1,31 @@
 class Beer
-  attr_reader :count
-
-  def initialize
+  def verse(number)
+    return last_verse if number == 0
+    "#{number} #{bottles(number)} of beer on the wall, #{number} #{bottles(number)} of beer.\nTake #{pronoun(number)} down and pass it around, #{beers_remaining(number)} of beer on the wall.\n"
   end
 
-  def verse(count)
-    @count = count
-    return last_verse if count == 0
-    "#{count} #{bottles} of beer on the wall, #{count} #{bottles} of beer.\nTake #{one_or_it} down and pass it around, #{last_beer} of beer on the wall.\n"
-  end
-
-  def sing(x, y=0)
-    answer = []
-    (y..x).each do |num|
-      answer << "\n"
-      answer << verse(num)
+  def sing(song_start, song_end=0)
+    song = []
+    song_start.downto(song_end).each do |number|
+      song << verse(number)
+      song << "\n"
     end
-    answer = answer.reverse
-    answer.join("")
+    song.join("")
   end
 
   def last_verse
     "No more bottles of beer on the wall, no more bottles of beer.\nGo to the store and buy some more, 99 bottles of beer on the wall.\n"
   end
 
-  def one_or_it
-    return "it" if count == 1
-    "one"
+  def pronoun(number)
+    number == 1 ? "it" : "one"
   end
 
-  def bottles
-    return "bottle" if count < 2
-    "bottles"
+  def bottles(count)
+    count < 2 ? "bottle" : "bottles"
   end
 
-  def last_beer
+  def beers_remaining(count)
     return "no more bottles" if count < 2
     return "1 bottle" if count == 2
     "#{count - 1} bottles"
