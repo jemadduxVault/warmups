@@ -1,14 +1,16 @@
 class Beer
   def verse(number)
-    return last_verse if number == 0
+    number == 0 ? last_verse : normal_verse(number)
+  end
+
+  def normal_verse(number)
     "#{number} #{bottles(number)} of beer on the wall, #{number} #{bottles(number)} of beer.\nTake #{pronoun(number)} down and pass it around, #{beers_remaining(number)} of beer on the wall.\n"
   end
 
-  def sing(song_start, song_end=0)
+  def sing(start, stop=0)
     song = []
-    song_start.downto(song_end).each do |number|
-      song << verse(number)
-      song << "\n"
+    start.downto(stop).each do |number|
+      song << verse(number) + "\n"
     end
     song.join("")
   end
