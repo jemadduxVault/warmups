@@ -12,7 +12,7 @@ class Beer
     start.downto(stop).each do |number|
       song << verse(number) + "\n"
     end
-    song.join("")
+    song.join
   end
 
   def last_verse
