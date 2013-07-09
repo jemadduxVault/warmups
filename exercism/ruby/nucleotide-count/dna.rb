@@ -1,7 +1,7 @@
 class DNA
   attr_reader :nucleotides
 
-  Nucleotides_Whitelist = ["B", "D", "E", "F", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "V", "W", "Z"]
+  Nucleotides_Whitelist = ["B", "D", "E", "F", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "V", "W", "Z", "G", "C", "A", "T", "U"]
 
   def initialize(nucleotides)
     @nucleotides = nucleotides.split("")
